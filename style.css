@@ -1,0 +1,103 @@
+body {
+    font-weight: bold;
+    font-family: sans-serif;
+    background-image: linear-gradient(to right, #1a1a1a, #242424, #3d3d3d, #878787);
+}
+
+.dpresentation {
+    width: 100%;
+    height: auto;
+}
+
+.nmove {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+.nmove h2 {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 5px;
+    color: #878787;
+    font-size: 15px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+}
+
+.nmove div img {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    border:2px solid #3d3d3d;
+}
+
+.move{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.btnshow {
+    opacity: 1;
+    transition: opacity .5s linear;
+}
+
+.btnhide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.move_top {
+    width: 90%;
+    margin: auto;
+    font-size: 13px;
+    color: #878787;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+    padding: 20px 0px;
+    border-radius: 20px;
+    transition: visibility 1s, opacity 0.5s ease-out;
+}
+
+.nmove_bottom {
+    width: 90%;
+    margin-top: -5%;
+    margin-left: 5%;
+    position: absolute;
+}
+.nmove_bottom div{
+    width: 49%;
+    display: inline-block;
+}
+
+.nmove_bottom div button{
+    width: auto;
+    padding: 20px 40px;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+#previous {
+    text-align: left;
+}
+
+#previous button{
+    font-weight: bold;
+    color: #878787;
+    background-color: transparent;
+    border: 4px solid #878787;
+}
+
+#next {
+    text-align: right;
+}
+
+#next button{
+    font-weight: bold;
+    color: #1a1a1a;
+    background-color: transparent;
+    border: 4px solid #1a1a1a;
+}
