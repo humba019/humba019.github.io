@@ -3,6 +3,13 @@
 <head>
 	<title>humba</title>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
 	<link rel="stylesheet" href="./style.css">	
 	<script>
 		var arr = [
@@ -23,20 +30,29 @@
 
 				if(index == 0){
 					arrObj.viewing = 1;
-					toAppend.style.display = "block";
-					toAppend.style.transition = "opacity .5s linear";
-					toAppend.classList.remove("btnhide");
+
+					document.getElementById("presentation_movement")
+					.appendChild(toAppend);
+					
+					var appended = $("#div"+index);
+
+					appended.addClass('is-visible');    
+
+					setTimeout(function () {
+						appended.addClass('is-open');
+					}, 200);
+
 					arrViewing.push(arrObj);
+
 				}else{
 					arrObj.viewing = 0;
-					toAppend.style.display = "none";
-					toAppend.style.transition = "opacity .5s linear";
-					toAppend.classList.add("btnhide");
+
+					document.getElementById("presentation_movement")
+					.appendChild(toAppend);
+
 					arrViewing.push(arrObj);
 				}
 
-				document.getElementById("presentation_movement")
-				.appendChild(toAppend);
 				index++;
 			});
 		}
@@ -68,20 +84,29 @@
 
 					if(index == 0){
 						arrObj.viewing = 1;
-						toAppend.style.display = "block";
-						toAppend.style.transition = "opacity .5s linear";
-						toAppend.classList.remove("btnhide");
+
+						document.getElementById("presentation_movement")
+						.appendChild(toAppend);
+						
+						var appended = $("#div"+index);
+
+						appended.addClass('is-visible');    
+
+						setTimeout(function () {
+							appended.addClass('is-open');
+						}, 200);
+
 						arrViewing.push(arrObj);
+
 					}else{
 						arrObj.viewing = 0;
-						toAppend.style.display = "none";
-						toAppend.style.transition = "opacity .5s linear";
-						toAppend.classList.add("btnhide");
+
+						document.getElementById("presentation_movement")
+						.appendChild(toAppend);
+
 						arrViewing.push(arrObj);
 					}
 
-					document.getElementById("presentation_movement")
-					.appendChild(toAppend);
 					index++;
 				});
 			}else{
@@ -94,20 +119,29 @@
 
 						if(index == currentIndex){
 							arrObj.viewing = 1;
-							toAppend.style.display = "block";
-							toAppend.style.transition = "opacity .5s linear";
-							toAppend.classList.remove("btnhide");
+
+							document.getElementById("presentation_movement")
+							.appendChild(toAppend);
+
+							var appended = $("#div"+index);
+
+							appended.addClass('is-visible');    
+
+							setTimeout(function () {
+								appended.addClass('is-open');
+							}, 200);
+
 							arrViewing.push(arrObj);
+
 						}else{
 							arrObj.viewing = 0;
-							toAppend.style.display = "none";
-							toAppend.style.transition = "opacity .5s linear";
-							toAppend.classList.add("btnhide");
+
+							document.getElementById("presentation_movement")
+							.appendChild(toAppend);
+
 							arrViewing.push(arrObj);
 						}
 
-						document.getElementById("presentation_movement")
-						.appendChild(toAppend);
 						index++;
 					});
 				}
@@ -128,20 +162,28 @@
 
 					if(index == lastIndex){
 						arrObj.viewing = 1;
-						toAppend.style.display = "block";
-						toAppend.style.transition = "opacity .5s linear";
-						toAppend.classList.remove("btnhide");
+
+						document.getElementById("presentation_movement")
+						.appendChild(toAppend);
+
+						var appended = $("#div"+index);
+
+						appended.addClass('is-visible');    
+
+						setTimeout(function () {
+							appended.addClass('is-open');
+						}, 200);
+
 						arrViewing.push(arrObj);
 					}else{
 						arrObj.viewing = 0;
-						toAppend.style.display = "none";
-						toAppend.style.transition = "opacity .5s linear";
-						toAppend.classList.add("btnhide");
+
+						document.getElementById("presentation_movement")
+						.appendChild(toAppend);
+
 						arrViewing.push(arrObj);
 					}
 
-					document.getElementById("presentation_movement")
-					.appendChild(toAppend);
 					index++;
 				});
 			}else{
@@ -154,25 +196,35 @@
 
 						if(index == currentIndex){
 							arrObj.viewing = 1;
-							toAppend.style.display = "block";
-							toAppend.style.transition = "opacity .5s linear";
-							toAppend.classList.remove("btnhide");
+
+							document.getElementById("presentation_movement")
+							.appendChild(toAppend);
+
+							var appended = $("#div"+index);
+
+							appended.addClass('is-visible');    
+
+							setTimeout(function () {
+								appended.addClass('is-open');
+							}, 200);
+
 							arrViewing.push(arrObj);
+
 						}else{
 							arrObj.viewing = 0;
-							toAppend.style.display = "none";
-							toAppend.style.transition = "opacity .5s linear";
-							toAppend.classList.add("btnhide");
+
+							document.getElementById("presentation_movement")
+							.appendChild(toAppend);
+
 							arrViewing.push(arrObj);
 						}
 
-						document.getElementById("presentation_movement")
-						.appendChild(toAppend);
 						index++;
 					});
 				}
 			}
 		}
+		
 	</script>
 </head>  
 <body onload="loadPresentationInformation_onload();">
@@ -181,20 +233,20 @@
 			<div id="profile_pic">
 				<img src="./img/humber.png"/>
 			</div>
-			<h2 id="myname_initial">Humberto</h2>
+			<h2 id="myname_initial">var developer = "humberto";</h2>
 		</div><br/>
 		<div class="move">
-			<div class="move_top" id="presentation_movement">
-			</div>
-		</div>		
-		<div class="nmove_bottom">
 			<div id="previous">
 				<button class="move_bottom_btn" OnClick="movementMessage_onclick('previous')">P</button>
+			</div>
+			<div class="move_top" id="presentation_movement">
 			</div>
 			<div id="next">
 				<button class="move_bottom_btn" OnClick="movementMessage_onclick('next')">N</button>
 			</div>
-		</div>
+		</div>		
+	</div>
+	<div class="nmove_bottom">
 	</div>
 	<div class="dtimeline">
 
